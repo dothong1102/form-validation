@@ -107,6 +107,7 @@
                 Validator.isRequired('#fullname', 'Vui lòng nhập đầy đủ tên của bạn'),
                 Validator.isRequired('#email'),
                 Validator.isEmail('#email'),
+                Validator.isRequired('#password'),
                 Validator.minLength('#password', 6),
                 Validator.isRequired('#password_confirmation'),
                 Validator.isConfirmed('#password_confirmation', function() {
@@ -128,7 +129,7 @@
             rules: [
                 Validator.isRequired('#email'),
                 Validator.isEmail('#email'),
-                Validator.minLength('#password'),
+                Validator.isRequired('#password'),
             ],
             onSubmit: function(data) { // onSubmit thể hiện khi submit form thì được gọi vào đây
                 console.log(data);
